@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h1>Form pendaftaran SIB 2023</h1>
+    <form>
+        <label for="nama">Nama Lengkap</label>
+        <br>
+        <input type="text" name="nama" id="nama" placeholder=" Masukkan nama lengkap">
+        <br><br>
+        <label for="email">Email</label>
+        <br>
+        <input type="text" name="email" id="email" placeholder="Masukkan email">
+        <br><br>
+        <label for="nohp">No.HP</label>
+        <br>
+        <input type="text" name="nohp" id="nohp" placeholder=" Masukkan nomor hp">
+        <br><br>
+        <label for="Jk">Jenis kelamin</label>
+        <br>
+        <input type="radio" name="Jk" id="Jk">
+        <label for="Jk">Laki laki</label>
+        <br>
+        <input type="radio" name="Jk" id="Jk">
+        <label for="Jk">Perempuan</label>
+        <br><br>
+        <label for="jurusan">Jurusan</label>
+        <br>
+        <select name="jurusan" id="jurusan">
+            <option value="sistem informasi">Sistem Informasi</option>
+            <option value="teknik informasi">Teknik Informasi</option>
+            <option value="manajemen">Manajemen</option>
+        </select>
+        
+        <br><br>
+        <table>
+            <tr>
+                <td>Tulis alamat :</td>
+            </tr>
+            <tr>
+              <td><textarea cols="30" rows="7"></textarea></td>
+            </tr>
+            <tr>
+              <td><input type="reset" value="hapus"></td>
+             </tr>
+     </table>
+     <label for="foto">foto:</label><br><br>
+  <input type="file" id="foto" name="foto" multiple><br><br>
+  <input type="submit">
+    </form>
+    
+</body>
+</html>
