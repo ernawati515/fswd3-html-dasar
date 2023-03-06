@@ -1,0 +1,42 @@
+body{
+    background-color: teal;
+}
+.box{
+    background: powderblue;
+    padding: 10px;
+}
+img{
+    object-fit: cover;
+}
+.grid-1{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 80px;
+    align-items: center;
+    grid-gap: 30px;
+}
+.grid-1 > article{
+    border-radius: 30px;
+    background-color: aqua;
+}
+.grid-1 > article img{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+}
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 80px;
+    align-items: center;
+    grid-gap: 30px;
+}
+.grid-2 > article{
+    border-radius: 30px;
+    background-color: plum;
+}
+.grid-2 > article img{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+}
