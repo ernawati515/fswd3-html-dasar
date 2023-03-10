@@ -1,0 +1,129 @@
+body {
+    background-color: #7fdbf7;
+    color: #000;
+    font-family: "Nunito", sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+.h1 {
+    margin: 15px 0;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  .shadow {
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+  }
+  
+  i {
+    color: white;
+    font-size: 1.5em;
+    margin: auto;
+  }
+  
+  .container {
+    width: 470px;
+    height: 680px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 5px solid #000;
+  }
+  
+  .flag {
+    width: 219px;
+    height: 219px;
+    margin: 8px;
+    background-color: #b0a64c;
+  }
+  
+  .windows {
+    width: 219px;
+    height: 219px;
+    margin: 7px;
+    margin-top: 16px;
+    background-color: #fe5722;
+  }
+  
+  .facebook {
+    width: 214px;
+    height: 107px;
+    margin: 7px;
+    background-color: #2e99ca;
+  }
+  
+  .instagram {
+    width: 101px;
+    height: 215px;
+    margin: 7px;
+    background-color: #fec107;
+  }
+  
+  .twitter {
+    width: 101px;
+    height: 101px;
+    margin: 7px;
+    background-color: #36a8f4;
+  }
+  
+  .wifi {
+    width: 101px;
+    height: 101px;
+    margin: 7px;
+    background-color: #795547;
+  }
+  
+  .github {
+    width: 101px;
+    height: 215px;
+    margin: 7px;
+    margin-top: 16px;
+    background-color: #3f51b5;
+  }
+  
+  .whatsapp {
+    width: 336px;
+    height: 93px;
+    margin: 7px;
+    background-color: #27a88c;
+  }
+  
+  .save {
+    width: 101px;
+    height: 93px;
+    margin: 7px;
+    background-color: #571d64;
+  }
+  
+  .youtube {
+    width: 453px;
+    height: 93px;
+    margin: 7px;
+    background-color: #f32821;
+  }
+  
+  .ketiga {
+    display: flex;
+  }
+  
+  .keempat {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .keenam {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ketujuh {
+    display: flex;
+  }
+  
