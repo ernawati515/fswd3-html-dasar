@@ -1000,3 +1000,55 @@ let mahasiswa = [
   { id: 998, name: "Blythe Motsinger", gender: "F", score: 61 },
   { id: 999, name: "Christeen Paris", gender: "M", score: 82 },
 ];
+
+//filter mahasiswa 
+
+let filterMahasiswam = mahasiswa.filter(findMahasiswam)
+
+function findMahasiswam(value){
+  return value.gender == "M"
+}
+
+let filterMahasiswaf = mahasiswa.filter(findMahasiswaf)
+
+function findMahasiswaf(value){
+  return value.gender == "F"
+}
+
+//menghitung nilai average
+let average = filterMahasiswam.reduce((a,b) => a+b.score,0) /filterMahasiswam.length;
+let average2 = filterMahasiswaf.reduce((a,b) => a+b.score,0) /filterMahasiswaf.length;
+
+//menghitung nilai max
+let max = filterMahasiswam.reduce((a,b) => Math.max(a,b.score),-Infinity);
+let max2 = filterMahasiswaf.reduce((a,b) => Math.max(a,b.score),-Infinity);
+
+//menghitung nilai min
+let min = filterMahasiswam.reduce((prev,current) => prev.score < current.score ? prev : current);
+let min2 = filterMahasiswaf.reduce((prev,current) => prev.score < current.score ? prev : current);
+
+let mhsw ={
+  "male" : {
+    "count" : filterMahasiswam.length,
+    "score" :{
+      "average" : average,
+      "max" : max,
+      "min" : min.score,
+    },
+    "students" : filterMahasiswam,
+  },
+  "female" : {
+    "count" : filterMahasiswaf.length,
+    "score" :{
+      "average" : average2,
+      "max" : max2,
+      "min" : min2.score,
+    },
+    "students" : filterMahasiswaf,
+   
+  }
+
+}
+
+console.log(mhsw)
+
