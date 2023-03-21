@@ -1,3 +1,97 @@
+const baseUrl = "https://crudcrud.com/api/";
+
+// api key silahkan diganti sendiri
+const apiKey = "750de7232b4e4f2087db18b284d1fe13";
+const url = baseUrl + apiKey;
+const endpointTugas = `${url}/tugas`;
+const endpointKegiatan = `${url}/kegiatan`;
+
+const handleError = (error) => console.log(error);
+const handleSuccess = (result) => console.log(result);
+
+// GET semua data
+const getTugas = () => {
+  fetch(endpointTugas).then(handleSuccess).catch(handleError);
+};
+
+// GET detail data
+const detailTugas = (id) => {
+  fetch(`${endpointTugas}/${id}`).then(handleSuccess).catch(handleError);
+};
+
+// POST data/ menambah data
+const postTugas = (tugas) => {
+  fetch(endpointTugas, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(tugas),
+  })
+    .then(handleSuccess)
+    .catch(handleError);
+};
+
+// DELETE data
+const deleteTugas = (id) => {
+  fetch(`${endpointTugas}/${id}`, {
+    method: "DELETE",
+  })
+    .then(handleSuccess)
+    .catch(handleError);
+};
+
+// PUT data/ update data
+const updateTugas = (id, tugas) => {
+  fetch(`${endpointTugas}/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(tugas),
+  })
+    .then(handleSuccess)
+    .catch(handleError);
+};
+
+// async
+getTugas();
+deleteTugas("750de7232b4e4f2087db18b284d1fe13");
+getTugas();
+
+
+// ambil
+const tugas = {
+     id_tugas: "1",
+     nama_tugas: "belajar html",
+     waktu: "15 menit",
+   };
+
+const tugas2 = {
+    id_tugas: "2",
+    nama_tugas: "belajar masak",
+    waktu: "30 menit",
+  };
+const tugas3 = {
+    id_tugas: "3",
+    nama_tugas: "belajar nyanyi",
+    waktu: "10 menit",
+  };
+
+postTugas(tugas);
+postTugas(tugas2);
+postTugas(tugas3);
+
+const tugasEdit = {
+   id_tugas: "4",
+   nama_tugas: "belajar ngoding",
+   waktu: "1 jam",
+ };
+ updateTugas("750de7232b4e4f2087db18b284d1fe13", tugasEdit);
+detailTugas("750de7232b4e4f2087db18b284d1fe13");
+
+
+
 var taskInput = document.getElementById("new-task");
 var addButton = document.getElementsByTagName("button")[0];
 var incompleteTasksHolder = document.getElementById("incomplete-tasks");
@@ -96,3 +190,4 @@ for(var i = 0; i <  incompleteTasksHolder.children.length; i++) {
 for(var i = 0; i <  completedTasksHolder.children.length; i++) {
   addTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
+
